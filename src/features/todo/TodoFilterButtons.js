@@ -1,7 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { setFilter } from "./actions";
 
 function TodoFilterButtons() {
-  return <div>TodoFilterButtons</div>;
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <button onClick={() => dispatch(setFilter("SHOW_ALL"))}>Show ALL</button>
+      <button onClick={() => dispatch(setFilter("SHOW_COMPLETED"))}>
+        Show Completed
+      </button>
+      <button onClick={() => dispatch(setFilter("SHOW_ACTIVE"))}>
+        Show Active
+      </button>
+    </div>
+  );
 }
 
 export default TodoFilterButtons;
