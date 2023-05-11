@@ -27,6 +27,7 @@ const todoReducer = (state = initialState, action) => {
           return { ...todo, completed: !todo.completed };
         })
       };
+      
     case SET_FILTER:
       return { ...state, filter: payload };
 

@@ -6,7 +6,8 @@ function App() {
     <div className="App">
       Intro to Redux
       {/* <Counter /> */}
-      <MultiCounter />
+      {/* <MultiCounter /> */}
+      <Todo />
     </div>
   );
 }
