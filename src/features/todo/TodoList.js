@@ -15,6 +15,7 @@ const getVisibleTodos = (todos, filter) => {
       return todos;
   }
 };
+
 function TodoList() {
   const { todos, filter } = useSelector((state) => state.todo);
   const filteredTodos = getVisibleTodos(todos, filter);

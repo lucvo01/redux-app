@@ -22,12 +22,12 @@ const todoReducer = (state = initialState, action) => {
     case TOGGLE_TODO:
       return {
         ...state,
-        todos: state.todos.maps((todo) => {
+        todos: state.todos.map((todo) => {
           if (todo.id !== payload.id) return todo;
           return { ...todo, completed: !todo.completed };
         })
       };
-      
+
     case SET_FILTER:
       return { ...state, filter: payload };
 

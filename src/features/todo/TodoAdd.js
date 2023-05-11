@@ -8,7 +8,7 @@ function TodoAdd() {
 
   return (
     <div>
-      <input type="text" value={text} onChange={(e) => setText(e.target.value)}>
+      <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
         <button
           onClick={() => {
             dispatch(addTodo(text));
@@ -17,7 +17,6 @@ function TodoAdd() {
         >
           Add
         </button>
-      </input>
     </div>
   );
 }
