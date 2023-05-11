@@ -1,4 +1,5 @@
 export const ADD_TODO = "TODO.ADD";
+export const GET_TODOS = "TODO.GET_TODO";
 export const TOGGLE_TODO = "TODO.TOGGLE";
 export const SET_FILTER = "TODO.SET_FILTER";
 
@@ -30,6 +31,9 @@ const todoReducer = (state = initialState, action) => {
 
     case SET_FILTER:
       return { ...state, filter: payload };
+
+    case GET_TODOS:
+      return { ...state, todos: payload };
 
     default:
       return state;
