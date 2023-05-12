@@ -11,6 +11,6 @@ function Counter() {
       <button onClick={() => dispatch({ type: "COUNTER.DECREMENT" })}>-</button>
     </div>
   );
-}
+} 
 
 export default Counter;

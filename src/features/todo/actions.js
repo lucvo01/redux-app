@@ -29,7 +29,7 @@ export const getTodos = () => async (dispatch) => {
 
 export const toggleTodo = (id, updatedData) => async (dispatch) => {
   try {
-    const todo = {};
+    // const todo = {};
     const res = await apiService.put(`/todos/${id}`, updatedData);
     console.log(res);
     dispatch({ type: TOGGLE_TODO, payload: res.data });
