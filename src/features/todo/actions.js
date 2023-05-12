@@ -27,12 +27,23 @@ export const getTodos = () => async (dispatch) => {
   }
 };
 
-export const toggleTodo = (id) => {
-  return {
-    type: TOGGLE_TODO,
-    payload: { id }
-  };
+export const toggleTodo = (id, updatedData) => async (dispatch) => {
+  try {
+    const todo = {};
+    const res = await apiService.put(`/todos/${id}`, updatedData);
+    console.log(res);
+    dispatch({ type: TOGGLE_TODO, payload: res.data });
+  } catch (error) {
+    console.log(error);
+  }
 };
+
+// export const toggleTodo = (id) => {
+//   return {
+//     type: TOGGLE_TODO,
+//     payload: { id }
+//   };
+// };
 
 export const setFilter = (filter) => {
   return {

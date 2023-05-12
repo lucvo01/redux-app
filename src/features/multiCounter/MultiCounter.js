@@ -5,6 +5,7 @@ import { addCounter, increment, decrement } from "./actions";
 function MultiCounter() {
   const counters = useSelector((state) => state.multiCounter);
   const dispatch = useDispatch();
+  
   return (
     <div>
       <button onClick={() => dispatch(addCounter())}>Add Counter</button>
